@@ -10,3 +10,17 @@
 | Cortex-M3   | 128KB       | STM32F103xB | 否           |
 | Cortex-M3   | 256KB       | STM32F103xC | 是           |
 
+
+
+
+
+目前驱动移植情况：
+
+- [x] LED
+- [x] FLASH
+- [x] CAN
+- [x] KEY
+
+- [x] LCD
+
+  
