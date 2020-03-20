@@ -78,6 +78,67 @@ void BlockWrite(unsigned int Xstart, unsigned int Xend, unsigned int Ystart, uns
   SPI_WriteComm(0x2c);
 }
 
+void LCD_Start(void){
+  SPI_WriteComm(0x11); 
+  delay_ms(20); 
+ 
+  SPI_WriteComm(0xD0); 
+  SPI_WriteData(0x07); 
+  SPI_WriteData(0x41); 
+  SPI_WriteData(0x1F); 
+   
+  SPI_WriteComm(0xD1); 
+  SPI_WriteData(0x00); 
+  SPI_WriteData(0x20); 
+  SPI_WriteData(0x0D); 
+   
+  SPI_WriteComm(0xD2); 
+  SPI_WriteData(0x03); 
+  SPI_WriteData(0x00); 
+   
+  SPI_WriteComm(0xC0); 
+  SPI_WriteData(0x10); 
+  SPI_WriteData(0x3B); 
+  SPI_WriteData(0x00); 
+  SPI_WriteData(0x02); 
+  SPI_WriteData(0x11); 
+   
+  SPI_WriteComm(0xC5); 
+  SPI_WriteData(0x02); 
+   
+  SPI_WriteComm(0xC8); 
+  SPI_WriteData(0x00); 
+  SPI_WriteData(0x01); 
+  SPI_WriteData(0x20); 
+  SPI_WriteData(0x01); 
+  SPI_WriteData(0x10); 
+  SPI_WriteData(0x0F); 
+  SPI_WriteData(0x74); 
+  SPI_WriteData(0x67); 
+  SPI_WriteData(0x77); 
+  SPI_WriteData(0x50); 
+  SPI_WriteData(0x0F); 
+  SPI_WriteData(0x10); 
+   
+  SPI_WriteComm(0xF8); 
+  SPI_WriteData(0x01); 
+   
+  SPI_WriteComm(0xFE); 
+  SPI_WriteData(0x00); 
+  SPI_WriteData(0x02); 
+
+  SPI_WriteComm(0x20);
+  SPI_WriteComm(0x3A); 
+  SPI_WriteData(0x55); 
+
+  delay_ms(120); 
+  SPI_WriteComm(0x29); 
+  delay_ms(10);
+
+	SPI_WriteComm(0x36); //Set_address_mode
+ 	SPI_WriteData(0x28); 
+}
+
 /************************************************************
 中层函数集合
 void DrawPixel(u16 x, u16 y, int Color)              // 在指定坐标画点
@@ -128,6 +189,7 @@ void LCD_Init(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
+  LCD_Start();
 }
 
 void LCD_Clear(u16 Color)

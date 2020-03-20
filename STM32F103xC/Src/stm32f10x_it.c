@@ -79,29 +79,6 @@ void SysTick_Handler(void)
 
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
-//  CAN_Receive(CAN1, CAN_FIFO0, &CAN_RECE_DATE);
-//	if (CAN_RECE_DATE.Data[0] == 0x50) {
-//		if (CheckData(CAN_RECE_DATE.Data)) {
-//      switch (CAN_RECE_DATE.Data[1]) {
-//        case 0x54: 
-//          discharge1->DischargeId = CAN_RECE_DATE.Data[5] * 181;
-//          StoreDischargeData(discharge1);
-//          delay_ms(100);
-//          __set_FAULTMASK(1);   //STM32程序软件复位  
-//          NVIC_SystemReset(); 
-//        case 0x53: 
-//          CAN_RECE_FLAG = 1;
-//          break;
-//      }
-//      if (CAN_RECE_DATE.Data[1] == 0x54) {
-//        discharge1->DischargeId = CAN_RECE_DATE.Data[5] * 181;
-//        StoreDischargeData(discharge1);
-//        delay_ms(100);
-//        __set_FAULTMASK(1);   //STM32程序软件复位  
-//        NVIC_SystemReset(); 
-//      } else if (CAN_RECE_DATE.Data[1] == 0x53) CAN_RECE_FLAG = 1;
-//		}
-//	}
 }
 
 /******************************************************************************/

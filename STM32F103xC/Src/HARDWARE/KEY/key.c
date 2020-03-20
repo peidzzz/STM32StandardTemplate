@@ -24,7 +24,6 @@ uint8_t KEY_Scan(void)
 //            return KEY0_PRES;
 //    } else if (KEY0 == 1)
 //        key_up = 1;
-//    return 0;                  // 无按键按下
-  return 0;
+    return 0;                  // 无按键按下
 }
 #endif
