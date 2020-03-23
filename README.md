@@ -1,6 +1,6 @@
-**写在前面** 
+## **写在前面** 
 
-使用本工程使用git emoji
+为了更加有效且有趣地Code，本工程代码版本控制使用 [Gitmoji](<https://github.com/carloscuesta/gitmoji>) 作为提交信息的前缀，感兴趣的小伙伴们可以了解一下。
 
 
 
