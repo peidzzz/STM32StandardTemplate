@@ -1,1 +1,4 @@
 STM32F103xC/Output/
+*.orig
+*.scvd
+STM32F103xC/User/TEMP.uvguix.Administrator
