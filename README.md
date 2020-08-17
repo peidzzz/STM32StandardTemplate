@@ -16,8 +16,8 @@
 
 | MCU内核版本 | MCU闪存容量 | MCU型号     | 目前是否支持 |
 | ----------- | ----------- | ----------- | ------------ |
-| Cortex-M3   | 64KB        | STM32F103x8 | 否           |
-| Cortex-M3   | 128KB       | STM32F103xB | 否           |
+| Cortex-M0   |             |             |              |
+| Cortex-M0+  |             |             |              |
 | Cortex-M3   | 256KB       | STM32F103xC | 是           |
 
 
